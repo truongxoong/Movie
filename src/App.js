@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import 'antd/dist/antd.css';
+import {Routes, Route} from 'react-router-dom'
+import Home from './page/home';
+import Anime from './page/anime';
+import Action from './page/action';
+import DetailMovie from './page/detailMovie';
+import Romance from './page/romance';
+import Login from './page/login';
+import LayoutMain from './component/layout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=''>
+      <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/' element={<LayoutMain />}>
+            <Route index element={<Home />} />
+            <Route path='/detail/:IdMovie' element={<DetailMovie />} />
+            <Route path='/anime' element={<Anime />} />
+            <Route path='/romance' element={<Romance />} />
+            <Route path='/action' element={<Action />} />
+          </Route>
+      </Routes>
     </div>
   );
 }

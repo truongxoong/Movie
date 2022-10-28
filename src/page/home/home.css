@@ -1,0 +1,42 @@
+.nowPlaying .swiper,
+.topRated .swiper {
+  position: static;
+}
+.nowPlaying .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 93%;
+}
+.nowPlaying .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+.nowPlaying .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  right: 0px;
+}
+
+.nowPlaying .swiper-button-next::after {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+.topRated .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

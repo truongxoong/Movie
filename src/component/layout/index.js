@@ -8,6 +8,7 @@ import { Layout, Menu } from "antd";
 import { Link, Outlet } from "react-router-dom";
 import HeaderLayout from "./layoutHeader";
 import "./layout.css";
+import LayoutFooter from "./layoutFooter";
 const { Header, Footer, Sider, Content } = Layout;
 
 function LayoutMain() {
@@ -57,7 +58,7 @@ function LayoutMain() {
         <Layout
           className="layoutContent"
           style={{
-            marginLeft: 320,
+            marginLeft: 200,
           }}
         >
           <Header
@@ -66,6 +67,7 @@ function LayoutMain() {
               padding: 0,
               background: "white",
               width: "80%",
+              marginLeft: 120,
             }}
           >
             <HeaderLayout />
@@ -74,10 +76,20 @@ function LayoutMain() {
             style={{
               width: "80%",
               marginTop: 50,
+              marginLeft: 120,
             }}
           >
             <Outlet />
           </Content>
+          <Footer
+            style={{
+              marginTop: 80,
+              padding: 0,
+              background: "#313f52",
+            }}
+          >
+            <LayoutFooter />
+          </Footer>
         </Layout>
       </Layout>
     </div>
